@@ -30,9 +30,9 @@ MIT © [AlekseyLeshko](https://github.com/AlekseyLeshko)
 
 [npm-image]: https://badge.fury.io/js/generator-my-routes.svg
 [npm-url]: https://npmjs.org/package/generator-my-routes
-[travis-image]: https://travis-ci.org/AlekseyLeshko/generator-my-routes.svg?branch=master
-[travis-url]: https://travis-ci.org/AlekseyLeshko/generator-my-routes
-[daviddm-image]: https://david-dm.org/AlekseyLeshko/generator-my-routes.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/AlekseyLeshko/generator-my-routes
-[coveralls-image]: https://coveralls.io/repos/AlekseyLeshko/generator-my-routes/badge.svg
-[coveralls-url]: https://coveralls.io/r/AlekseyLeshko/generator-my-routes
+[travis-image]: https://travis-ci.org/my-brilliant-boilerplate/generator-my-routes.svg?branch=master
+[travis-url]: https://travis-ci.org/my-brilliant-boilerplate/generator-my-routes
+[daviddm-image]: https://david-dm.org/my-brilliant-boilerplate/generator-my-routes.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/my-brilliant-boilerplate/generator-my-routes
+[coveralls-image]: https://coveralls.io/repos/my-brilliant-boilerplate/generator-my-routes/badge.svg
+[coveralls-url]: https://coveralls.io/r/my-brilliant-boilerplate/generator-my-routes
