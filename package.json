@@ -45,7 +45,7 @@
     "coverageReporters": ["html", "lcov"]
   },
   "scripts": {
-    "prepublish": "nsp check",
+    "prepublishOnly": "nsp check",
     "pretest": "eslint .",
     "precommit": "lint-staged",
     "test": "jest"
