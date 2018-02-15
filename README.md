@@ -37,4 +37,4 @@ MIT © [AlekseyLeshko](https://github.com/AlekseyLeshko)
 [daviddm-image]: https://david-dm.org/my-brilliant-boilerplate/generator-my-routes.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/my-brilliant-boilerplate/generator-my-routes
 [coveralls-image]: https://coveralls.io/repos/my-brilliant-boilerplate/generator-my-routes/badge.svg
-[coveralls-url]: https://coveralls.io/my-brilliant-boilerplate/generator-my-routes
+[coveralls-url]: https://coveralls.io/r/my-brilliant-boilerplate/generator-my-routes
