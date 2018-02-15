@@ -1,6 +1,8 @@
 # generator-my-routes [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > Yeoman generator for routes in React project
 
+![routes-structure](docs/imgs/routes-structure.png)
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-my-routes using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
