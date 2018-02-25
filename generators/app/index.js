@@ -11,27 +11,33 @@ module.exports = class extends Generator {
 
     const prompts = [
       {
-        type: 'confirm',
-        name: 'someAnswer',
-        message: 'Would you like to enable this option?',
+        type: String,
+        name: 'srcPath',
+        message: 'Name of application directory',
+        default: 'src',
+        store: true
+      },
+      {
+        type: Boolean,
+        name: 'reactNative',
+        message: 'For react native',
         default: true
       }
     ];
 
     return this.prompt(prompts).then(props => {
-      // To access props later use this.props.someAnswer;
       this.props = props;
     });
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
+    this._createMainRoutesFile();
   }
 
-  install() {
-    this.installDependencies();
+  _createMainRoutesFile() {
+    this.fs.copy(
+      this.templatePath('main-routes.js'),
+      this.destinationPath(`${this.props.srcPath}/routes/index.js`)
+    );
   }
 };
