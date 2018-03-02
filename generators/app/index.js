@@ -2,6 +2,7 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
+const mkdirp = require('mkdirp');
 
 module.exports = class extends Generator {
   prompting() {
@@ -9,35 +10,36 @@ module.exports = class extends Generator {
       yosay('Welcome to the grand ' + chalk.red('generator-my-routes') + ' generator!')
     );
 
-    const prompts = [
-      {
-        type: String,
-        name: 'srcPath',
-        message: 'Name of application directory',
-        default: 'src',
-        store: true
-      },
-      {
-        type: Boolean,
-        name: 'reactNative',
-        message: 'For react native',
-        default: true
-      }
-    ];
-
-    return this.prompt(prompts).then(props => {
-      this.props = props;
+    this.argument('routeName', { type: String, required: true, default: 'dashboard' });
+    this.argument('path', { type: String, required: true });
+    this.argument('reactNative', {
+      type: String,
+      alias: 'rn',
+      required: false,
+      default: true
     });
   }
 
   writing() {
-    this._createMainRoutesFile();
+    this._createRoute();
   }
 
-  _createMainRoutesFile() {
+  _createRoute() {
+    const routeName = this.arguments[0];
+    const basePath = this.arguments[1];
+
+    const routePath = `${basePath}/routes/${routeName}`;
+    this._createFileStructure(routePath);
+  }
+
+  _createFileStructure(routePath) {
+    mkdirp.sync(`${routePath}/components/`);
+    mkdirp.sync(`${routePath}/containers/`);
+    mkdirp.sync(`${routePath}/routes/`);
+
     this.fs.copy(
-      this.templatePath('main-routes.js'),
-      this.destinationPath(`${this.props.srcPath}/routes/index.js`)
+      this.templatePath('routes.js'),
+      this.destinationPath(`${routePath}/routes/index.js`)
     );
   }
 };
